@@ -2,14 +2,9 @@
 
 package co.grandcircus.StringCalculator;
 
-import java.lang.reflect.Array;
-
 public class StringCalculator {
 
-
 public static String add(String number) {
-
-	StringCalculator sum = new  StringCalculator();
 	 
 	if (number.equals("")) {
 		return "0";
@@ -24,6 +19,7 @@ public static String add(String number) {
 		int result1 = firstNum + secondNum;
 		String num2 = Integer.toString(result1);
 		return num2;
+		
 	} else if (number.contains(",")){
         return sum(splitNumbers(number));
 	
@@ -33,6 +29,7 @@ public static String add(String number) {
 private static String[] splitNumbers(String numbers){
   return numbers.split(",");
 }
+
 private static int toInt(String number) {
 return Integer.parseInt(number);
 }
